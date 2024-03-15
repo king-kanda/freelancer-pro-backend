@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+
+# Dependency directories
+/typings/
+
+# Logs
+logs
+*.log
+
+# Environment files
+.env
+
+# Built output
+/dist/
+/build/
+/out/
+
+# Ignore npm debug log
+npm-debug.log
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Ignore configuration files
+config.js
+
+# Ignore server-generated files
+server-generated-files/
+
+# Ignore package-lock files
+package-lock.json
+yarn.lock
