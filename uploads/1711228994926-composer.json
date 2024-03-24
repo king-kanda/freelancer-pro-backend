@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/console": "^6.0",
+        "laravel/installer": "^5.1"
+    }
+}

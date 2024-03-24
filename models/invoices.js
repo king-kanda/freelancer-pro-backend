@@ -1,38 +1,44 @@
 import mongoose from 'mongoose';
 
 const invoiceSchema = new mongoose.Schema({
-  projectID: {
+  clientID: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Project', // Reference to the Project model for the associated project
+    ref: 'Client',
     required: true,
   },
-  clientName: {
+  freelancerID: {
     type: String,
     required: true,
   },
-  clientEmail: {
-    type: String,
-    required: true,
-  },
-  amount: {
+  invoiceNote: String,
+  items: [{
+    itemName: String,
+    cost: Number,
+    quantity: Number,
+    total: Number,
+    discounts: Number,
+  }],
+  invoiceTotal: {
     type: Number,
-    required: true,
-  },
-  dueDate: {
-    type: Date,
     required: true,
   },
   status: {
     type: String,
-    enum: ['pending', 'paid'],
+    enum: ['pending', 'paid' ,'overdue' , 'sent'],
     default: 'pending',
   },
   paymentDate: {
     type: Date,
     default: null,
   },
-  paymentMethod: String,
-  transactionID: String,
+  dueDate: {
+    type: Date,
+    required: true,
+  },
+  dateInvoiced: {
+    type: Date,
+    default: Date.now, // Set default value to current date/time when an invoice is created
+  },
 });
 
 const Invoice = mongoose.model('Invoice', invoiceSchema);

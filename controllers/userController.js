@@ -2,10 +2,11 @@ import User from '../models/user.js'
 
 const createUser = async (req, res) => {
   try {
-    const { username, email, phoneNumber, fullName, userType, street , city , state , zipCode } = req.body;
+    const { freelanceId , username, email, phoneNumber, fullName, userType, street , city , state , zipCode } = req.body;
 
     // Create a new user with the embedded address
     const user = new User({
+      freelanceId,
       username,
       email,
       phoneNumber,
@@ -17,6 +18,7 @@ const createUser = async (req, res) => {
         state,
         zipCode,
       },
+     
     });
 
     await user.save();

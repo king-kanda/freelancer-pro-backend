@@ -1,0 +1,23 @@
+composer.phar
+#C-x#
+Desktop
+Documents
+Downloads
+file_list.txt
+hello there cow
+hello.txt
+hello.txt~
+IdeaProjects
+javasharedresources
+Music
+new.txt
+new.txt~
+new.txt > wewe write to file
+new.txt > wewe write to file~
+package-lock.json
+Pictures
+Public
+snap
+Templates
+Untitled Document 1
+Videos
