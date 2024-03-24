@@ -9,7 +9,7 @@ import invoiceRoutes from './routes/invoiceRoutes.js';
 import clientRoutes from './routes/clientRoutes.js'
 import fileRoutes from './routes/projectFileRoutes.js'
 
-const PORT = 8080;
+const PORT = 3000;
 const app = express();
 app.use(cors())
 app.use(express.json());
